@@ -6,15 +6,15 @@ title: Le Wagon - Middleman - About
   <div class="about-content">
     <h1>This template was built with <i class="fa fa-heart"></i> by</h1>
     <ul class="list-inline">
-      <% data.users.each do |user| %>
+      <% ["Fl00rtje", "Dabbous1"].each do |user| %>
         <li>
-          <% link_to "https://kitt.lewagon.com/alumni/#{user.github_nickname}", target: "_blank" do %>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle" %>
+          <% link_to "https://kitt.lewagon.com/alumni/#{user}", target: "_blank" do %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user}", class: "img-circle" %>
           <% end %>
-          <h2><%= user.name %></h2>
+          <h2><%= user %></h2>
           <p>
-            <% link_to "https://github.com/#{user.github_nickname}", target: "_blank" do %>
-              <i class="fa fa-github"></i> <%= user.github_nickname %>
+            <% link_to "https://github.com/#{user}", target: "_blank" do %>
+              <i class="fa fa-github"></i> <%= user %>
             <% end %>
           </p>
         </li>
@@ -22,3 +22,12 @@ title: Le Wagon - Middleman - About
     </ul>
   </div>
 </div>
+
+<!-- <ul class="list-inline text-center">
+  <% ["Fl00rtje", "poghisyo", ""].each do |gh_username| %>
+    <li>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}", class: "img-circle" %>
+      <h3><%= gh_username.capitalize %></h3>
+    </li>
+  <% end %>
+</ul> -->
